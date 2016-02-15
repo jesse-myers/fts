@@ -1,0 +1,71 @@
+<html>
+<head><title>For the Sports - Admin Console</title>
+<style>
+	.nav-container { position: absolute; display: block; width: 300px; height: 100%; float: left;}
+	.content-container {position: absolute; display: block; height: 100%; left: 350px;}
+	nav { width: 225px; margin: 0 auto; border-radius: 5px; border: 1px solid #bbb; padding-left: 15px; padding-bottom: 25px; margin-top: 50px;}
+	nav ul {list-style: none;}
+	* { font-family: 'Open Sans',sans-serif; }
+	h3 {font-weight: bold; font-size: 20px; margin-left: 10px;}
+	li {font-size: 14px;}
+	a { text-decoration: none;}
+	a:hover {font-weight: bold; color: navy;}
+	h1 {font-size: 26px; margin-left: 20px;}
+	table { border-collapse: collapse; }
+	th {font-size: 12px; text-align: left;padding: 5px;}
+	th:first-child { border-radius: 5px 0px 0px 0px;}
+	th:last-child { border-radius: 0px 5px 0px 0px;}
+	tr:last-child > td:first-child { border-radius: 0px 0px 0px 5px;}
+	tr:last-child > td:last-child { border-radius: 0px 0px 5px 0px;}
+	td {font-size: 11px; margin: 0; padding: 5px; border: none;}
+	tr:nth-child(even) {background: #eee;}
+	tr:nth-child(odd) {background: #dbdffe; }
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="nav-container">
+<nav>
+	<h3>Articles/Features</h3>
+	<ul>
+		<li><a href="#">Add New Article</a></li>
+		<li><a href="#">Article List</a></li>
+	</ul>
+	<h3>Configuration</h3>
+	<ul>
+		<li><a href="#">Authors</a></li>
+		<li><a href="#">Users</a></li>
+	</ul>
+	<h3>Your Account</h3>
+	<ul>
+		<li><a href="#">Edit Your Account</a></li>
+		<li><a href="#">Log Out</a></li>
+	</ul>
+</nav>
+</div>
+<div class="content-container">
+	<h1>Article List</h1>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Added</th>
+			<th>Long Description</th>
+			<th>Active?</th>
+			<th>Updated</th>
+			<th>Edit</th>
+		</tr>
+		<tr>
+			<td>Test Post</td>
+			<td>njx9</td>
+			<td>2/15/2016</td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum ante, bibendum at purus in, hendrerit mattis magna.</td>
+			<td><input type="checkbox" checked disabled /></td>
+			<td>N/A</td>
+			<td><a href="#">Edit</a></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

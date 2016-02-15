@@ -1,0 +1,114 @@
+<html>
+<head><title>For the Sports - Admin Console</title>
+<style>
+	.nav-container { position: absolute; display: block; width: 300px; height: 100%; float: left;}
+	.content-container {position: absolute; display: block; height: 100%; left: 350px;}
+	nav { width: 225px; margin: 0 auto; border-radius: 5px; border: 1px solid #bbb; padding-left: 15px; padding-bottom: 25px; margin-top: 50px;}
+	nav ul {list-style: none;}
+	* { font-family: 'Open Sans',sans-serif; }
+	h3 {font-weight: bold; font-size: 20px; margin-left: 10px;}
+	li {font-size: 14px;}
+	a { text-decoration: none;}
+	a:hover {font-weight: bold; color: navy;}
+	h1 {font-size: 26px; margin-left: 20px;}
+	table { border-collapse: collapse; }
+	th {font-size: 12px; text-align: left;padding: 5px;}
+	th:first-child { border-radius: 5px 0px 0px 0px;}
+	th:last-child { border-radius: 0px 5px 0px 0px;}
+	tr:last-child > td:first-child { border-radius: 0px 0px 0px 5px;}
+	tr:last-child > td:last-child { border-radius: 0px 0px 5px 0px;}
+	td {font-size: 11px; margin: 0; padding: 5px; border: none;}
+	tr:nth-child(even) {background: #eee;}
+	tr:nth-child(odd) {background: #dbdffe; }
+	label {position: absolute; display: block; float: left;margin-left: 40px;margin-top: -3px; font-size: 13px;}
+	input,select,textarea {display: block; margin-left: 20px; position: absolute; border-width: 0px 0px 1px 0px;}
+	textarea {min-width: 300px; min-height: 200px; display: inline-block; position: relative; margin-bottom: 15px;}
+	input[type="text"],select {min-width: 300px;}
+	button {display: inline-block; position: relative; margin-left: 18px;}
+	form {line-height: 2.5;}
+	textarea,select option:first-child {color: #aaa;}
+	input:focus,select:focus,textarea:focus {outline:none;}
+	.text1{display:none;height:10px;width:100px;background:transparent;color: green;position: absolute;left: 20px;top: 40px;font-size: 11px;z-index: 10;}
+	.text2{display:none;height:10px;width:100px;background:transparent;color: green;position: absolute;left: 20px;top: 80px;font-size: 11px;z-index: 10;}
+	.text3{display:none;height:10px;width:100px;background:transparent;color: green;position: absolute;left: 20px;top: 120px;font-size: 11px;z-index: 10;}
+	.text4{display:none;height:10px;width:100px;background:transparent;color: green;position: absolute;left: 20px;top: 160px;font-size: 11px;z-index: 10;}
+	.greenunderline {border-bottom-color: green;}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="nav-container">
+<nav>
+	<h3>Articles/Features</h3>
+	<ul>
+		<li><a href="#">Add New Article</a></li>
+		<li><a href="#">Article List</a></li>
+	</ul>
+	<h3>Configuration</h3>
+	<ul>
+		<li><a href="#">Authors</a></li>
+		<li><a href="#">Users</a></li>
+	</ul>
+	<h3>Your Account</h3>
+	<ul>
+		<li><a href="#">Edit Your Account</a></li>
+		<li><a href="#">Log Out</a></li>
+	</ul>
+</nav>
+</div>
+<div class="content-container">
+	<h1>Article Entry</h1>
+	<form>
+		<p class="text1">headline</p>
+		<input type="text" placeholder="headline" name="title" id="hiddenInput" /><br />
+		<p class="text2">description</p>
+		<input type="text" placeholder="description" name="longdesc" id="hiddenInput2" /><br />
+		<p class="text3">main image url</p>
+		<input type="text" placeholder="main image url" name="mainimage" id="hiddenInput3" /><br />
+		<p class="text4">article text</p>
+		<textarea name="article" id="hiddenInput4" >article text</textarea><br />
+		<select name="author" />
+			<option selected>authors</option>
+			<option>njx9</option>
+			<option>someone else</option>
+		</select><br />
+		<label for="active">active</label><input type="checkbox" checked name="active" /><br />
+		<button>Submit</button>
+	</form>
+</div>
+<script>
+$(document).ready(function () {
+	$('#hiddenInput').keypress( function () {
+		if ($(this).val().length>0)
+		{
+			$('.text1').show();
+		}
+		$(this).addClass("greenunderline");
+	});
+	$('#hiddenInput2').keypress( function () {
+		if ($(this).val().length>0)
+		{
+			$('.text2').show();
+		}
+		$(this).addClass("greenunderline");
+	}); 
+	$('#hiddenInput3').keypress( function () {
+		if ($(this).val().length>0)
+		{
+			$('.text3').show();
+		}
+		$(this).addClass("greenunderline");
+	}); 
+	$('#hiddenInput4').keypress( function () {
+		if ($(this).val().length>0)
+		{
+			$('.text4').show();
+		}
+		$(this).addClass("greenunderline");
+	}); 
+});
+</script>
+</body>
+</html>
