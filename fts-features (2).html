@@ -1,0 +1,164 @@
+<html>
+<head><title>For the Sports!</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
+<style>
+* { font-family: 'Raleway',sans-serif; font-size: 12px; }
+nav {margin: 0; padding: 0; position: absolute; top: 0px; left: 0px; display: block;}
+body { background-color:#fff; margin: 0; padding: 0; }
+.bannerbar { margin: 0; padding: 0; width: 50%; top: 0; left: 0; height: 50px; background-color: #ccc; text-align: center; font-size: 24px; display: block; color: white; font-family: 'Open Sans'; float: left;}
+.bannersearch { margin: 0; padding: 0; width: 50%; top: 0; left: 0; height: 50px; background-color: #ccc; text-align: center; font-size: 24px; display: block; color: white; font-family: 'Open Sans'; float: right;}
+#menu { left: 0px; margin: 0; padding: 0; width: 100%; float: left; -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75); box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75); }
+#menu ul {list-style: none; margin: 0; padding: 0; border: 0; height: 25px;}
+#menu ul li { float: left; display: block; background-color: #ddd; width: 20%; border: 0; height: 25px;}
+#menu ul li:hover { background-color: #eee; }
+#menu ul li a { display: block; width: 100%; height: 20px; text-decoration: none; color: #333; margin: 0 auto; text-align: center; letter-spacing: .4em; font-weight: bold;  font-family: Roboto,sans-serif; padding-top: 5px;}
+#wrapper {min-height: 100%; position: relative;}
+#menu:after,#menu > ul:after, .search:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.content {position: absolute; top: 100px; width: 100%; display: block; }
+footer {position: absolute; bottom: 0px; width: 100%; height: 50px; background-color: #ddd;}
+.mainstory { position: absolute; display: block; margin: 0 auto; width: 600px; background-color:  #bcd5d1; padding: 10px; border: 1 #ddd solid; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75); height: 350px; font-size: 16px;}
+.search {display: block; position: relative; background-color: #ddd; border-radius: 5px; width: 200px; float: right; margin-right: 5px; margin-top: 5px; padding-bottom: 5px; }
+input, button {border-radius: 5px; border: none; padding: 3px; }
+button { margin-top: 5px;}
+input {margin-top: 0px;}
+.readstory h1 { font-size: 24px; font-weight: bold; margin-left: 5%;}
+.readstory h2 { font-size: 18px; font-weight: normal; margin-left: 10%; font-family: 'Open Sans', sans-serif;}
+.readstory h3 { font-size: 12px; font-weight: normal; margin-left: 5%; font-family: 'Open Sans', sans-serif;}
+.articleText { font-size: 18px; font-weight: normal; margin-left: 5%; font-family: 'Merriweather',serif;}
+.readstory .mainImage { width: 100%; height: 400px; display: block; margin-top: 0px;}
+.monthly { float: left; width: 55%; height: 100%; margin-left: 5%; padding: 5px; }
+.topstories { float: right; width: 28%; height: 100%; margin-right: 5%; padding: 5px;}
+.weekline { font-family: 'Open Sans',sans-serif; text-align: center; color: #3434bb; padding: 3px; width: 100%; background-color: #ddd; font-weight: bold; margin: 0; display: block;}
+.weeklyfeature { width: 100%; margin: 10px 0px 0px 0px; padding-left: 5px; padding-right: 5px; display: block; }
+.weeklyfeature img { float: left; max-width: 50%; width: auto; max-height: 25%; height: auto; min-width: 320px; min-height: 200px; display: block; padding-right: 5%;}
+.weeklyfeature div { float: right; width: 40%; padding-left: 5%; display: block; }
+.weeklyminor { width: 30%; float: left; display: block; padding: 10px 10px 0px 10px; }
+.weeklyminor:nth-child(2n+1) { border-left: 1px #bbb solid; border-right: 1px #bbb solid;}
+.monthly h1 { font-family: 'Open Sans',sans-serif; font-size: 1.1em; color: #ab3434;}
+.monthly h2 { font-family: 'Roboto',serif; font-size: 1.2em; color: #222;}
+.monthly h4 { font-family: 'Raleway',serif; font-size: 1em; color: #3434cc;}
+.desc { font-family: 'Merriweather',serif; font-size: 15px; }
+.weeklyminor img { width: 100%; height: auto; display: block; }
+.weeklyminor h1 { font-family: 'Open Sans',sans-serif; font-size: 1em; color: #ab3434; }
+.weeklyminor h2 { font-family: 'Roboto',serif; font-size: 1.1em; color: #222; }
+.weeklyminor h4 { font-family: 'Raleway',serif; font-size: .9em; color: #3434cc; }
+.weeklyminor .desc{ font-family: 'Merriweather',serif; font-size: 12px; }
+.topstories img { width: 120px; height: auto; display: block; float: left;}
+.topstories div {display: inline-table; padding: 5px; }
+.topstories .topdesc { font-family: 'Roboto',serif; font-size: 1.2em; float: right; margin-left: 5px; }
+.topstories .author { font-family: 'Open Sans',sans-serif; font-size: 1.1em; color: #ab3434; margin-left: 5px; }
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	<nav id="menu">
+		<div class="bannerbar">SMALL BANNER HERE</div>
+		<div class="bannersearch">
+			<div class="search">
+				<input type="text" placeholder="search..." width="25" border-radius: 3px; />
+				<button>
+					<img src="http://www.clearfocus.com/images/magnifying_glass_icon.png" />
+				</button>
+			</div>
+		</div>
+		<ul>
+			<li><a href="#">FEATURES</a></li>
+			<li><a href="#">OTHER STUFF</a></li>
+			<li><a href="#">WRITERS</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">BOARD</a></li>
+		</ul>
+	</nav>
+	<div class="content">
+		
+		<div class="monthly">
+			<p class="weekline">JANUARY 24 - JANUARY 30, 2016</p>
+			<div class="weeklyfeature">
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<div>
+					<h1>LIFE</h1>
+					<h2>This is a Sample Headline</h2>
+					<p class="desc">Here's some sample text where we might put in a tl;dr version of the article. 100 words or less. Marketing-y to grab attention. Need some way to interstice images, maybe just include a textwrap in the CSS.</p>
+					<h4>Written by: njx9</h4>
+				</div>
+			</div><hr width="100%" height="1">
+			<div class="weeklyminor">
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<h1>FOOTBALL</h1>
+				<h2>Cam Newton > Peyton</h2>
+				<p class="desc">50 reasons why the Donkeys suck.</p>
+				<h4>Written by: vidae</h4>
+			</div>
+			<div class="weeklyminor">
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<h1>BASKETBALL</h1>
+				<h2>Something, Something, Knicks</h2>
+				<p class="desc">I can't even pretend to know enough about basketball to be witty.</p>
+				<h4>Written by: Rob S</h4>
+			</div>
+			<div class="weeklyminor">
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<h1>MOVIES</h1>
+				<h2>The 2015 Commies</h2>
+				<p class="desc">All of the trophy award winners, including nominations!</p>
+				<h4>Written by: Commie</h4>
+			</div>
+		</div>
+		<div class="topstories">
+			<p class="weekline">TOP STORIES</p>
+			<div>
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<p class="topdesc">
+					Story Headline 1
+				
+				<p class="author">
+					Written by: njx9
+				</p></p>
+			</div>
+			<div>
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<p class="topdesc">
+					Story Headline 2
+				
+				<p class="author">
+					Written by: njx9
+				</p></p>
+			</div>
+			<div>
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<p class="topdesc">
+					Story Headline 3
+				
+				<p class="author">
+					Written by: njx9
+				</p></p>
+			</div>
+			<div>
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<p class="topdesc">
+					Story Headline 4
+				
+				<p class="author">
+					Written by: njx9
+				</p></p>
+			</div>
+			<div>
+				<img src="http://freebigpictures.com/wp-content/uploads/2009/09/mountain-walk.jpg" />
+				<p class="topdesc">
+					Story Headline 5
+				
+				<p class="author">
+					Written by: njx9
+				</p></p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>
